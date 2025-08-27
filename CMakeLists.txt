@@ -1,12 +1,14 @@
-CMakeLists.txt
-cmake_minimum_required(VERSION 3.16)
-project(p_healz_api LANGUAGES CXX)
+cmake_minimum_required(VERSION 3.10)
+project(PHealzAPI)
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_STANDARD 17)
 
-# Enable vcpkg integration
-find_package(Drogon CONFIG REQUIRED)
+# Add all source files here
+add_executable(phealz
+    main.cpp
+    models/Customer.cpp
+    models/Order.cpp
+    services/CustomerService.cpp
+    services/OrderService.cpp
+)
 
-add_executable(${PROJECT_NAME} src/main.cpp)
-target_link_libraries(${PROJECT_NAME} PRIVATE Drogon::Drogon)
