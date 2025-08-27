@@ -1,0 +1,19 @@
+# Ignore build folders
+/build/
+/CMakeFiles/
+/CMakeCache.txt
+
+# Ignore executables
+*.exe
+*.out
+*.o
+
+# Ignore local databases
+*.db
+
+# Ignore logs
+*.log
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
